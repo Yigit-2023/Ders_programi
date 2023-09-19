@@ -1,6 +1,6 @@
 #Yapımcı:
 #Yiğit Çıtak
-Version = "1.1"
+Version = "1.2"
 ders_list = """
 Ders/gün	 1	  2	  3	  4	  5	  6	  7	  8
 ------------------------------------------------------------------------------------------
@@ -17,6 +17,23 @@ Cuma	 |      SMAN4	SMAN4	STMAT1	STMAT1	SÇTDT	SÇTDT	SFIKO	SFIKO
 											|17.09.2023|	
 																	
 """
+
+h100 = "Muhamet Furkan Çoban"
+h200 = "Eray Soydağ"
+h300 = "Kevser Dinç"
+h400 = "Ethel Bakkal"
+h500 = "Cemal İnan"
+h600 = "Bayram Çetin"
+h700 = "Hüseyin Eroğlu"
+h800 = "Emin Konmuş"
+h900 = "Şeyma Aba çal"
+h1000 = "Rasim Ünal"
+h11000 = "Gülşen Şule"
+h12000 = "Hakan Öğdem"
+h13000 = "Erdal efe"
+
+
+
 adap = "Adabı Muaşeret "
 beden1 = "Beden "
 dm3 = "Dini Müsiki "
@@ -115,6 +132,40 @@ while dongu_of_or_on:
 		print(ders_list)
 
 
+	elif ilk_girdi == "öğretmenler" or ilk_girdi == "Öğretmenler" or ilk_girdi == "ÖĞRETMENLER":
+
+		hoca_dongusu = True
+
+		while hoca_dongusu:
+
+			hoca_girdisi = input("\nGünlere göre öretmen sıralaması. Gün girin\n\n")
+
+			if hoca_girdisi == "pazartesi" or hoca_girdisi == "PAZARTESİ" or hoca_girdisi == "Pazartesi":
+				print(at+"1:\t"+h800+at+"2:\t"+h800+at+"3:\t"+h13000+at+"4:\t"+h100+at+"5:\t"+h600+at+"6:\t"+h600+at+"7:\t"+h900+at+"8:\t"+h400+at)
+
+			elif hoca_girdisi == "salı" or hoca_girdisi == "SALI" or hoca_girdisi == "Salı":
+				print(at+"1:\t"+h1000+at+"2:\t"+h1000+at+"3:\t"+h700+at+"4:\t"+h700+at+"5:\t"+h800+at+"6:\t"+h200+at+"7:\t"+h900+at+"8:\t"+h900+at)
+
+			elif hoca_girdisi == "çarşamba" or hoca_girdisi == "ÇARŞAMBA" or hoca_girdisi == "Çarşamba":
+				print(at+"1:\t"+h900+at+"2:\t"+h900+at+"3:\t"+h400+at+"4:\t"+h400+at+"5:\t"+h300+at+"6:\t"+h300+at+"7:\t"+h900+at+"8:\t"+h900+at)
+
+			elif hoca_girdisi == "perşembe" or hoca_girdisi == "PERŞEMBE" or hoca_girdisi == "Perşembe":
+				print(at+"1:\t"+h1000+at+"2:\t"+h1000+at+"3:\t"+h100+at+"4:\t"+h100+at+"5:\t"+h500+at+"6:\t"+h500+at+"7:\t"+h700+at+"8:\t"+h400+at)
+
+			elif hoca_girdisi == "cuma" or hoca_girdisi == "CUMA" or hoca_girdisi == "Cuma":
+				print(at+"1:\t"+h11000+at+"2:\t"+h11000+at+"3:\t"+h12000+at+"4:\t"+h12000+at+"5:\t"+h400+at+"6:\t"+h400+at+"7:\t"+h500+at+"8:\t"+h500+at)
+
+
+			elif hoca_girdisi == "çıkış" or hoca_girdisi == "çık":
+				hoca_dongusu = False
+
+
+			else:
+				print("Hatalı Gün!!")
+
+
+
+
 
 
 	elif ilk_girdi == "Saat" or ilk_girdi == "SAAT" or ilk_girdi == "saat":
@@ -133,6 +184,9 @@ while dongu_of_or_on:
 
 	elif ilk_girdi == "Kaynak kod":
 		print("https://github.com/Yigit-2023/Ders_programi")
+
+	elif ilk_girdi == "kapat":
+		dongu_of_or_on = False
 		
 	else:
 		print("\nLütfen Gün adı girin\n")
